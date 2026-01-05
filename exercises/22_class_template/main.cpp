@@ -44,12 +44,12 @@ struct Tensor4D {
             for(unsigned int i1=0;i1<shape[1];++i1){
                 for(unsigned int i2=0;i2<shape[2];++i2){
                     for(unsigned int i3=0;i3<shape[3];++i3){
-                        unsigned int idx = i0 * stride[0] + i1 * stride[1] + i2 * stride[2] + i3 * stride[3];
+                        unsigned int idx = i0 * stride[0] + i1 * stride[1] + i2 * stride[2] + i3 ;
                         unsigned int oi0 = others.shape[0] == 1 ? 0 : i0;
                     unsigned int oi1 = others.shape[1] == 1 ? 0 : i1;
                     unsigned int oi2 = others.shape[2] == 1 ? 0 : i2;
                     unsigned int oi3 = others.shape[3] == 1 ? 0 : i3;
-                    unsigned int oidx = oi0 * o_stride[0] + oi1 * o_stride[1] + oi2 * o_stride[2] + oi3 * o_stride[3];
+                    unsigned int oidx = oi0 * o_stride[0] + oi1 * o_stride[1] + oi2 * o_stride[2] + oi3 ;
                         data[idx] += others.data[oidx];
                     }
                 }

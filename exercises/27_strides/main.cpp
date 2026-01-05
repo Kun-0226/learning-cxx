@@ -20,7 +20,7 @@ std::vector<udim> strides(std::vector<udim> const &shape) {
     //       使用逆向迭代器可能可以简化代码
     strides[shape.size()-1] = 1;
     for(int i=shape.size()-2; i>=0; i--){
-        strides[i] = strides[i+1]*shape[i+1];
+        strides[i] = (strides[i+1]*shape[i+1]);
     }
     return strides;
     

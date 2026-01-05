@@ -7,10 +7,8 @@
 template<class k, class v>
 bool key_exists(std::map<k, v> const &map, k const &key) {
     // TODO: 实现函数
-    if(map.find(key)!=map.end()){
-        return true;
-    }
-    return false;
+    
+    return map.count(key);
 }
 
 template<class k, class v>

@@ -25,10 +25,10 @@ T sigmoid(T x) {
 
 TaggedUnion sigmoid_dyn(TaggedUnion x) {
     TaggedUnion ans{x.type};
-    if(ans.type==DataType::Double){
+    if(x.type==DataType::Double){
         ans.d=sigmoid(x.d);
     }
-    if(ans.type==DataType::Float){
+    if(x.type==DataType::Float){
         ans.f=sigmoid(x.f);
     }
     // TODO: 根据 type 调用 sigmoid
